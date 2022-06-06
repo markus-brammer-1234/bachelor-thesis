@@ -1,3 +1,7 @@
+# latexmk is set to output to a the following directory
+build/
+!build/main.pdf
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

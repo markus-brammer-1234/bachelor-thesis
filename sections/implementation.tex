@@ -1,0 +1,71 @@
+\chapter{Implementation} % 
+\label{chpt:implementation}
+
+
+\section{Programming Paradigm} % 
+\label{sec:programming-paradigm}
+
+F\# is a functional-first programming language. This is great as functional
+programming can be very succinct. But functional programming is not always the
+fastest approach. For this project, the local algorithm from \cite{liu1998a} is
+implemented as a \texttt{Solver}-object with an iterative implementation of the
+algorithm. 
+
+\cite{liu1998a} uses arrays in the implementation of the local algorithm. Arrays
+are not very functional as they are mutable. To make the code functional, the
+arrays could easily be replaced by a combination of linked lists and maps. This
+will result in 1) the code being functional but also 2) the code being much
+slower and taking up more memory. When interested in speed of the algorithm,
+these trade-offs are severe. 
+
+The assignments \texttt{A} and \texttt{D} in the paper are implemented as arrays
+in their \texttt{Algorithm Local2}. A more apparent solution would be to
+implement them as the F\# datatype \texttt{Map}. This makes sense as they more
+resemble the mathematical understanding of the assignments. But Maps in F\# are
+implemented as binary trees making both look-up and insertion $O(\log n)$
+operations (where $n$ is the height of the tree). Insertions and look-up are
+used often. 
+
+% TODO or is $n$ the number of nodes?
+
+The state space for this project can easily explode: Arrays are much more
+compact than Maps. Maps can be more flexible but not even this is needed: We
+know the entire state space before running the algorithm. 
+
+Thus, the only not to use arrays is that they are not functional. But given that
+F\# allows for iterative programming, implementing this algorithm iteratively
+makes the most sense. This will make this project not purely functional, but
+that is a worthy trade-off. 
+
+
+\section{Railway Networks} % \label{sec:railway-networks-implementation}
+
+A railway network can be represented as a tuple (triple) of the following: A map
+representing the port connections, a map of the signals identifications and
+there placement, and a map of the trains' initial and final positions. 
+
+
+\subsection{Network thoughts} % \label{sec:network-thoughts}
+
+When 
+
+
+\section{Domain-Specific Language (DSL)} % \label{sec:domain-specific-language}
+
+For easier creation of railway systems a DSL has been implemented. This DSL is
+inspired by the DSL described in \cite{kasting2016b}. Contrary to the approach
+cited, the F\# library FsLexYacc is used to write the lexer and parser for this
+DSL. 
+
+This has been a great exercise in writing a lexer/parser. One problem with
+FsLexYacc, though, is error handling: While it is very easy to spot wrong tokens
+and characters in the lexer, generating a useful error message for the parser is
+difficult. If this project is to expand into something bigge, this would
+definitely be an area to improve. 
+
+
+\section{Unit Tests} % \label{sec:unit-tests}
+
+Some key elements of the code has been tested using unit tests. For this, the
+\texttt{xUnit} library has been used.  
+

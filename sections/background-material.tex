@@ -1,0 +1,24 @@
+\chapter{Background Material} % 
+\label{chpt:background-material}
+
+\section{Dependency Graphs} % 
+\label{sec:dependency-graphs}
+
+A dependency graph consists of vertices and so-called hyper edges connecting the
+vertices. A hyper edge points from a single vertex to zero or more vertices.
+Thus, a hyper edge can be expressed as a tuple $(v, S)$ where $v$ is the vertex
+and $S$ the set of vertices that this exact hyper edge points to. This implies
+that it is possible that $S = \emptyset$ which is indeed the case. This is not
+the same as a vertex not having a hyper edge: A vertex can have no hyper edges;
+a vertex with a hyper edge pointing to the empty has at least one hyper edge.
+Note that a vertex $v$ can have multiple hyper edges: $(v, S_1),\ (v, S_2),\
+\ldots\ (v,S_n)$. A simple directed graph can be characterized as a dependency
+graph with only singleton hyper edges. 
+
+
+\section{Railway Networks} % 
+\label{sec:railway-networks}
+
+The most fundamental part of railway network is the tracks. 
+
+
