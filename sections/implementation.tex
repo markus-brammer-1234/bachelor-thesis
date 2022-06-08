@@ -37,17 +37,13 @@ F\# allows for iterative programming, implementing this algorithm iteratively
 makes the most sense. This will make this project not purely functional, but
 that is a worthy trade-off. 
 
+\section{On-the-fly Solver} 
 
-\section{Railway Networks} % \label{sec:railway-networks-implementation}
-
-A railway network can be represented as a tuple (triple) of the following: A map
-representing the port connections, a map of the signals identifications and
-there placement, and a map of the trains' initial and final positions. 
-
-
-\subsection{Network thoughts} % \label{sec:network-thoughts}
-
-When 
+An assumption used for the on-the-fly solver is that the simulation relation
+satisfies the following predicate: 
+\begin{align}
+  i_1 \neq i_2 \implies (s_1, i_1) \not \preceq (s_2, i_2)
+\end{align}
 
 
 \section{Domain-Specific Language (DSL)} % \label{sec:domain-specific-language}

@@ -1,32 +1,32 @@
 % Preamble for Bachelor Thesis. 
 % Author: Markus B. Jensen, s183816
 
+% --- Packages ------------------------------------------------------------ {{{1
 
-% --- Packages ------------------------------------------------------------------
-
-\usepackage[english]{babel} % localisation 
-\usepackage[]{geometry}     % Package for changing page margins (before fancyhdr) 
-\usepackage{xcolor}         % Package for defining DTU colours to be used
-\usepackage{amsmath}        % For aligning equations among other
-\usepackage{listings}       % Package for inserting code, (before cleveref)
-\usepackage{hyperref}       % Package for cross referencing (also loads url package)
-\usepackage{caption}        % better captions
-\usepackage{subcaption}     % for subfigures
-\usepackage{tabularx}       % for ability to adjust column spacing in tabular better
-\usepackage{booktabs}       % for better tables
-% \usepackage{makecell}
-\usepackage{float}          % floating figures in correct places
-% \usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\usepackage[english]{babel}   % localisation 
+\usepackage{geometry}         % Package for changing page margins (before fancyhdr) 
+\usepackage{xcolor}           % Package for defining DTU colours to be used
+\usepackage{amsmath}          % For aligning equations among other
+\usepackage{listings}         % Package for inserting code, (before cleveref)
+\usepackage{hyperref}         % Package for cross referencing (also loads url package)
+\usepackage{caption}          % better captions
+\usepackage{subcaption}       % for subfigures
+\usepackage{tabularx}         % for ability to adjust column spacing in tabular better
+\usepackage{booktabs}         % for better tables
+\usepackage{float}            % floating figures in correct places
 \usepackage[toc]{appendix}
-\usepackage{parskip}
 \usepackage{xargs}
 \usepackage{titlesec}
+\usepackage{tikz}
+\usepackage{upquote}
 
 
-% --- Statics -------------------------------------------------------------------
+% --- Personal info ------------------------------------------------------- {{{1
 
 \def\thesistitle{Bachelor Thesis}
-\def\thesissubtitle{A game-based platform for synthesis of programs controlling railway systems}
+\def\thesissubtitle{%
+  A game-based platform for synthesis of programs controlling railway systems%
+}
 
 \def\thesisauthor{Markus Brammer Jensen}
 \def\studentnumber{s183816}
@@ -35,7 +35,7 @@
 \def\department{DTU Compute}
 \def\departmentdescriber{Department of Applied Mathematics and Computer Science}
 
-% --- Colors --------------------------------------------------------------------
+% --- Defining colors ----------------------------------------------------- {{{1
 
 % DTU Colors
 \definecolor{dtured}{rgb/cmyk}{0.6,0,0 / 0,0.91,0.72,0.23}
@@ -50,43 +50,14 @@
 \definecolor{green}{rgb/cmyk}{0,0.5333,0.2078 / 0.89,0.05,1,0.17}
 \definecolor{purple}{rgb/cmyk}{0.4745,0.1373,0.5569 / 0.67,0.96,0,0}
 
-% Document colors
-\def\dtulogocolor{white}
-\colorlet{frontpagetextcolor}{white}
-\colorlet{frontbackcolor}{blue}
-\def\targetcolormodel{rgb}
+% --- Code listings ------------------------------------------------------- {{{1 
 
-% Exercise colors 
-\colorlet{leftbarcolor}{brightgreen}
-
-
-%%%%%%%%%%%%%%%%%%%%
-% HYPER REFERENCES %
-%%%%%%%%%%%%%%%%%%%%
-
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    filecolor=black,
-    urlcolor=blue,
-    citecolor=black,
-    breaklinks=true,
-}
-
-
-%%%%%%%%%%%%%%%%%
-% CODE LISTINGS % 
-%%%%%%%%%%%%%%%%%
-
-\usepackage{color}
 \definecolor{bluekeywords}{rgb}{0.13,0.13,1}
 \definecolor{greencomments}{rgb}{0,0.5,0}
 \definecolor{redstrings}{rgb}{0.9,0,0}
 
 \definecolor{cyantypes}{rgb}{0.18,0.56,0.72}
 
-\usepackage{upquote}
- 
 % From here: https://gist.github.com/eiriktsarpalis/6224587
 \lstdefinelanguage{fsharp}{%
   % Standard keywords
@@ -121,48 +92,65 @@
 
 \lstset{language = fsharp}
 
+% --- Title styles -------------------------------------------------------- {{{1
 
-%%%%%%%%%%%%%%%%%
-% CUSTOM TTTLES %
-%%%%%%%%%%%%%%%%%
+\titleformat{\chapter}{\sffamily\bfseries\huge}{\thechapter}{1em}{\raggedright}
+\titleformat{\section}{\sffamily\bfseries\Large}{\thesection}{1em}{\raggedright}
+\titleformat{\subsection}{\sffamily\bfseries\large}{\thesection}{1em}{\raggedright}
+
+\titlespacing{\chapter}{0pt}{0pt}{20pt}
+
+% --- Frontpage settings -------------------------------------------------- {{{1
+
+% DTU logo
+\def\logocolor{white}
+\def\colormodel{rgb}
+
+% Page color. 
+\colorlet{frontpagetextcolor}{white}
+\colorlet{frontbackcolor}{blue}
+\def\dtulogo{./figures/logos/\logocolor_\colormodel.pdf}
+
+% Picture on front page. 
+\def\frontpagepicture{./figures/railway-2.jpg}
 
 \newcommand{\TitleFont}[1]{\Huge \bfseries \sffamily #1}
 \newcommand{\SubTitleFont}[1]{\huge \sffamily #1}
 \def\PrintName{%
-    \large \sffamily {\groupnumber}: {\thesisauthor}, {\studentnumber}%
+  {\large \sffamily {\thesisauthor}, {\studentnumber}}%
+}
+
+% --- Other --------------------------------------------------------------- {{{1
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=blue,
+    citecolor=black,
+    breaklinks=true,
 }
 
 
-%%%%%%%%%%%%%%%%%%%
-% HEADER / FOOTER %
-%%%%%%%%%%%%%%%%%%%
 
-% \pagestyle{fancy}
-% \fancyhf{}
-% \renewcommand{\headrulewidth}{0pt} % Remove horizontal line under header
-% \lhead{02122: Genetic Algorithm}
-% \chead{\department}
-% \rhead{{\thesisauthor}, {\studentnumber}}
-% \cfoot{Page {\thepage} of \pageref{LastPage}}
+\iffalse 
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}
+{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}[runin]
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titleformat{\subparagraph}[runin]
+{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
 
-%%%%%%%%%%%%%%%
-% TO-DO NOTES %
-%%%%%%%%%%%%%%%
-
-%% Taken from here: https://tex.stackexchange.com/a/178806
-%\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
-%\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
-%\newcommandx{\info}[2][1=]{\todo[linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{#2}}
-%\newcommandx{\improvement}[2][1=]{\todo[linecolor=pink,backgroundcolor=pink!25,bordercolor=pink,#1]{#2}}
-%\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
-
-
-%%%%%%%%%%%%%%%%%
-% MISCELLANEOUS %
-%%%%%%%%%%%%%%%%%
-
-%\setlength{\parskip}{.5em}
-%\setlength{\parindent}{1.5em}
-
-
-\titleformat{\chapter}{\bfseries\huge}{\thechapter}{1em}{\raggedright}
+\titlespacing*{\chapter} {0pt}{50pt}{40pt}
+\titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1em}
+\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+\fi
