@@ -1,5 +1,5 @@
 # latexmk is set to output to a the following directory
-build/
+build/*
 !build/main.pdf
 
 ## Core latex/pdflatex auxiliary files:

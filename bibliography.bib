@@ -1,78 +1,144 @@
-@article{liu1998a,
-  author = {Liu, XX and Smolka, SA},
-  title = {Simple linear-time algorithms for minimal fixed points},
-  language = {eng},
-  format = {article},
-  journal = {Automata, Languages and Programming},
-  volume = {1443},
-  pages = {53-66},
-  year = {1998},
-  issn = {16113349, 03029743},
-  isbn = {3540647813, 3540686819, 9783540647812, 9783540686811},
-  publisher = {SPRINGER-VERLAG BERLIN}
+
+@misc{dotnet-botDictionaryClassSystem,
+  title = {Dictionary{$<$}{{TKey}},{{TValue}}{$>$} {{Class}} ({{System}}.{{Collections}}.{{Generic}})},
+  author = {{\noopsort{bot}}{dotnet-bot}},
+  abstract = {Represents a collection of keys and values.},
+  howpublished = {https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2},
+  langid = {american},
+  keywords = {.NET,Documentation,F\#},
+  file = {/home/markus/Documents/Zotero/storage/8D4UT5JV/system.collections.generic.html}
 }
 
+@misc{dotnet-botHashSetClassSystem,
+  title = {{{HashSet}}{$<$}{{T}}{$>$} {{Class}} ({{System}}.{{Collections}}.{{Generic}})},
+  author = {{\noopsort{bot}}{dotnet-bot}},
+  abstract = {Represents a set of values.},
+  howpublished = {https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.hashset-1},
+  langid = {american},
+  keywords = {.NET,Documentation,F\#},
+  file = {/home/markus/Documents/Zotero/storage/HGUI3NEW/system.collections.generic.html}
+}
 
-@article{karra2020a,
-  author = {Karra, Shyam Lal and Larsen, Kim Guldstrand and Muñiz, Marco and Srba, Jiří},
-  title = {On-the-Fly Synthesis for Strictly Alternating Games},
-  language = {eng},
-  format = {article},
+@misc{dotnet-botListClassSystem,
+  title = {List{$<$}{{T}}{$>$} {{Class}} ({{System}}.{{Collections}}.{{Generic}})},
+  author = {{\noopsort{bot}}{dotnet-bot}},
+  abstract = {Represents a strongly typed list of objects that can be accessed by index. Provides methods to search, sort, and manipulate lists.},
+  howpublished = {https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1},
+  langid = {american},
+  keywords = {.NET,Documentation,F\#},
+  file = {/home/markus/Documents/Zotero/storage/DJ8ZDZ45/system.collections.generic.html}
+}
+
+@article{FunctionalProgramming2022,
+  title = {Functional Programming},
+  year = {2022},
+  month = jan,
+  journal = {Wikipedia},
+  abstract = {In computer science, functional programming is a programming paradigm where programs are constructed by applying and composing functions. It is a declarative programming paradigm in which function definitions are trees of expressions that map values to other values, rather than a sequence of imperative statements which update the running state of the program. In functional programming, functions are treated as first-class citizens, meaning that they can be bound to names (including local identifiers), passed as arguments, and returned from other functions, just as any other data type can. This allows programs to be written in a declarative and composable style, where small functions are combined in a modular manner. Functional programming is sometimes treated as synonymous with purely functional programming, a subset of functional programming which treats all functions as deterministic mathematical functions, or pure functions. When a pure function is called with some given arguments, it will always return the same result, and cannot be affected by any mutable state or other side effects. This is in contrast with impure procedures, common in imperative programming, which can have side effects (such as modifying the program's state or taking input from a user). Proponents of purely functional programming claim that by restricting side effects, programs can have fewer bugs, be easier to debug and test, and be more suited to formal verification.Functional programming has its roots in academia, evolving from the lambda calculus, a formal system of computation based only on functions. Functional programming has historically been less popular than imperative programming, but many functional languages are seeing use today in industry and education, including Common Lisp, Scheme, Clojure, Wolfram Language, Racket, Erlang, Elixir, OCaml, Haskell, and F\#. Functional programming is also key to some languages that have found success in specific domains, like JavaScript in the Web, R in statistics, J, K and Q in financial analysis, and XQuery/XSLT for XML. Domain-specific declarative languages like SQL and Lex/Yacc use some elements of functional programming, such as not allowing mutable values. In addition, many other programming languages support programming in a functional style or have implemented features from functional programming, such as C++11, C\#, Kotlin, Perl, PHP, Python, Go, Rust, Raku, Scala, and Java (since Java 8).},
+  copyright = {Creative Commons Attribution-ShareAlike License},
+  langid = {english},
+  keywords = {Functional programming,Wikipedia},
+  annotation = {Page Version ID: 1068163024},
+  file = {/home/markus/Documents/Zotero/storage/V8HE2QFB/Functional_programming.html}
+}
+
+@article{karraOntheFlySynthesisStrictly2020,
+  title = {On-the-{{Fly Synthesis}} for {{Strictly Alternating Games}}},
+  author = {Karra, Shyam Lal and Larsen, Kim Guldstrand and Mu{\~n}iz, Marco and Srba, Ji{\v r}{\'i}},
   editor = {Janicki, Ryszard, Sidorova, Natalia, Chatain, Thomas},
+  year = {2020},
   journal = {Lecture Notes in Computer Science (including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
   volume = {12152},
-  pages = {109-128},
-  year = {2020},
+  pages = {109--128},
+  publisher = {{Springer}},
   issn = {16113349, 03029743},
+  doi = {10.1007/978-3-030-51831-8_6},
+  abstract = {We study two-player zero-sum infinite reachability games with strictly alternating moves of the players allowing us to model a race between the two opponents. We develop an algorithm for deciding the winner of the game and suggest a notion of alternating simulation in order to speed up the computation of the winning strategy. The theory is applied to Petri net games, where the strictly alternating games are in general undecidable. We consider soft bounds on Petri net places in order to achieve decidability and implement the algorithms in our prototype tool. Finally, we compare the performance of our approach with an algorithm proposed in the seminal work by Liu and Smolka for calculating the minimum fixed points on dependency graphs. The results show that using alternating simulation almost always improves the performance in time and space and with exponential gain in some examples. Moreover, we show that there are Petri net games where our algorithm with alternating simulation terminates, whereas the algorithm without the alternating simulation loops for any possible search order.},
   isbn = {3030518302, 3030518310, 9783030518301, 9783030518318},
-  publisher = {Springer},
-  doi = {10.1007/978-3-030-51831-8_6}
+  langid = {english},
+  keywords = {LiuSmolka},
+  file = {/home/markus/Documents/Zotero/storage/VH9W2FXD/Karra et al. - 2020 - On-the-Fly Synthesis for Strictly Alternating Game.pdf}
 }
 
-@article{karra2019a,
-  author = {Karra, Shyam Lal and Larsen, Kim Guldstrand and Lorber, Florian and Srba, Jiří},
-  title = {Safe and Time-Optimal Control for Railway Games},
-  language = {eng},
-  format = {article},
-  editor = {Collart-Dutilleul, Simon, Lecomte, Thierry, Romanovsky, Alexander},
+@article{karraSafeTimeOptimalControl2019,
+  title = {Safe and {{Time-Optimal Control}} for {{Railway Games}}},
+  author = {Karra, Shyam Lal and Larsen, Kim Guldstrand and Lorber, Florian and Srba, Ji{\v r}{\'i}},
+  editor = {{Collart-Dutilleul}, Simon, Lecomte, Thierry, Romanovsky, Alexander},
+  year = {2019},
   journal = {Lecture Notes in Computer Science (including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
   volume = {11495},
-  pages = {106-122},
-  year = {2019},
+  pages = {106--122},
+  publisher = {{Springer Verlag}},
   issn = {16113349, 03029743},
+  doi = {10.1007/978-3-030-18744-6_7},
+  abstract = {Railway scheduling is a complex and safety critical problem that has recently attracted attention in the formal verification community. We provide a formal model of railway scheduling as a stochastic timed game and using the tool Uppaal Stratego,wesynthesisethe most permissive control strategy for operating the lights and points at the railway scenario such that we guarantee system's safety (avoidance of train collisions). Among all such safe strategies, we then select (with the help of reinforcement learning) a concrete strategy that minimizes the time needed to move all trains to their target locations. This optimizes the speed and capacity of a railway system and advances the current state-of-the-art where the optimality criteria were not considered yet. We successfully demonstrate our approach on the models of two Danish railway stations, and discuss the applicability and scalability of our approach},
   isbn = {3030187438, 3030187446, 9783030187439, 9783030187446},
-  publisher = {Springer Verlag},
-  doi = {10.1007/978-3-030-18744-6_7}
+  langid = {english},
+  file = {/home/markus/Documents/Zotero/storage/96E8TT4Z/Karra et al. - 2019 - Safe and Time-Optimal Control for Railway Games.pdf}
 }
 
-@article{kasting2016a,
+@article{kastingSynthesisRailwaysignalingPlans2016,
+  title = {Synthesis of Railway-Signaling Plans Using Reachability Games},
   author = {Kasting, Patrick Frederik Soelmark and Hansen, Michael Reichhardt and Vester, Steen},
-  title = {Synthesis of railway-signaling plans using reachability games},
-  language = {eng},
-  format = {article},
+  year = {2016},
   journal = {28th Symposium on the Implementation and Application of Functional Programming Languages,},
   pages = {9},
-  year = {2016},
+  publisher = {{Association for Computing Machinery}},
+  doi = {10.1145/3064899.3064908},
+  abstract = {In this work, we show the feasibility of using functional programming (more specifically F\#) in connection with gamebased methods for synthesis of correct-by-construction controllers (also called signaling plans) for railway networks. This is a massively resource-demanding application. A model for railway networks comprising trains, signals, linear sections, and points is established together with a domain-specific language capturing the important concepts in the model. A translation from railway network models to two-player reachability games is provided. In these games, the existential player (the control system) controls signals and points and the universal player (the antagonistic environment) controls movement of trains. A winning strategy for the existential player provides a signaling plan that will safely guide trains through the network. The concepts from the railway network model and the twoplayer reachability game are captured, in a natural manner, by type declarations in F\#. Furthermore, the F\# translation functions are formulated in a manner that is close to the mathematical formulations. This increases confidence in the correctness of the implementation and it decreases the development time. Imperative features of F\# proved useful in two places: Hash tables and arrays were used in the representations of the railway network model and the reachability game. This allowed for more compact representations and a more efficient game solver (providing the winning strategy). Experiments show that we are able to synthesize signaling plans for real railway networks of substantial size.},
   isbn = {1450347673, 9781450347679},
-  publisher = {Association for Computing Machinery},
-  doi = {10.1145/3064899.3064908}
+  langid = {english},
+  keywords = {✅},
+  file = {/home/markus/Documents/Zotero/storage/X3DKYY7X/Kasting et al. - 2016 - Synthesis of railway-signaling plans using reachab.pdf}
 }
 
-@thesis{kasting2016b,
+@phdthesis{kastingSystemSynthesisUsing2016,
+  title = {{System synthesis using parity games, System syntese ved brug af parity games}},
   author = {Kasting, Patrick Frederik Soelmark},
-  title = {System synthesis using parity games, System syntese ved brug af parity games},
-  language = {und},
-  format = {thesis},
   year = {2016},
-  publisher = {DTU Department of Applied Mathematics and Computer Science}
+  abstract = {In this thesis, we explore the feasibility of generating signaling plans for railway networks using reachability games. We define a signaling plan to be a mapping from train positions to configurations of the points and signals in the network. A signaling plan must bring the trains to their destinations while avoiding collisions and derailments. We present a model of railway networks that describes the states of a network as well as the state transitions. We develop a simple domain-specific language (DSL) for descriptions of networks within this model. We add a game semantics to this DSL by defining a reachability game, in which the states of a network acts as the vertices and the state transitions acts as the edges. The player Eve controls the points and signals and the player Adam controls the trains. A signaling plan can be obtained from Eve's winning strategy, so we present a linear-time algorithm for computing winning strategies in reachability games. The reachability game quickly becomes very large, when we increase the size of the networks. Hence, we devise three abstractions, each of which drastically reduces the size of the game. Finally, we implement a synthesis tool, which generates signaling plans for networks described in the DSL. This tool is based on the reachability game and the game-solving algorithm. Experiments with this tool show that we are able to synthesize signaling plans for real railway networks of substantial size.},
+  langid = {und},
+  school = {DTU Department of Applied Mathematics and Computer Science},
+  file = {/home/markus/Documents/Zotero/storage/DBDEULYJ/Kasting - 2016 - System synthesis using parity games, System syntes.pdf}
 }
 
-@thesis{kok2019a,
+@phdthesis{kokGamebasedSolutionsRailway2019,
+  title = {{Game-based solutions for railway networks, Spilbaserede l\o sningsmetoder til jernbanenetv\ae rk}},
   author = {Kok, Mathias},
-  title = {Game-based solutions for railway networks, Spilbaserede løsningsmetoder til jernbanenetværk},
-  language = {und},
-  format = {thesis},
   year = {2019},
-  publisher = {DTU Department of Applied Mathematics and Computer Science}
+  abstract = {In this project a model for a railway network is defined. The goal is to a find correct-by-construction signalling plan, which guarantees to guide all trains to their intended destinations, for a given railway configuration. In order to achieve this a game-based approach has been used, where reachability games can be derived from the a railway configuration. This game is solved by transforming it into a dependency graph and finding the minimal post-fixed-point assignment. The process of calculating the fixed-point assignment only needs to process every edge in the reachability game once. The game however has an exponential increase in size, relative to the number of trains and controllable railway elements. In order to allow the solution of larger games, different techniques are presented whose complexity is polynomial in the size of the railway network and trains. These allows for a large decrease in how much of the game needs to be explored. The programming language Haskell has been used to implement this solution. As such the use of the non-strict semantics of Haskell is also explored.},
+  langid = {und},
+  school = {DTU Department of Applied Mathematics and Computer Science},
+  file = {/home/markus/Documents/Zotero/storage/4DVLQIHA/Kok - 2019 - Game-based solutions for railway networks, Spilbas.pdf}
 }
+
+@article{liuSimpleLineartimeAlgorithms1998,
+  title = {Simple Linear-Time Algorithms for Minimal Fixed Points},
+  author = {Liu, XX and Smolka, SA},
+  year = {1998},
+  journal = {Automata, Languages and Programming},
+  volume = {1443},
+  pages = {53--66},
+  publisher = {{SPRINGER-VERLAG BERLIN}},
+  issn = {16113349, 03029743},
+  abstract = {We present global and local algorithms for evaluating minimal fixed points of dependency graphs, a general problem in fixed-point computation and model checking. Our algorithms run in linear-time, matching the complexity of the best existing algorithms for similar problems, and are simple to understand. The main novelty of our global algorithm is that it does not use the counter and "reverse list" data structures commonly found in existing linear-time global algorithms. This distinction plays an essential role in allowing us to easily derive our local algorithm from our global one. Our local algorithm is distinguished from existing linear-time local algorithms by a combination of its simplicity and suitability for direct implementation. We also provide linear-time reductions from the problems of computing minimal and maximal fixed points in Boolean graphs to the problem of minimal fixed-point ewfluation in dependency graphs. This establishes dependency graphs as a suitable framework in which to express and compute alternationfree fixed points. Finally, we relate HORNSAT, the problem of Horn formula satisfiability, to the problem of minimal fixed-point evaluation in dependency graphs. In particular, we present straightforward, linear-time reductions between these problems for both directions of reducibility. As a result, we derive a lineartime loc\textasciitilde{} algorithm for HORNSAT, the first of its kind as far as we are aware,},
+  langid = {english},
+  keywords = {LiuSmolka},
+  file = {/home/markus/Documents/Zotero/storage/YUFBTU63/Liu and Smolka - 1998 - Simple linear-time algorithms for minimal fixed po.pdf}
+}
+
+@article{PurelyFunctionalProgramming2022,
+  title = {Purely Functional Programming},
+  year = {2022},
+  month = apr,
+  journal = {Wikipedia},
+  abstract = {In computer science, purely functional programming usually designates a programming paradigm\textemdash a style of building the structure and elements of computer programs\textemdash that treats all computation as the evaluation of mathematical functions.  Program state and mutable objects are usually modeled with temporal logic, as explicit variables that represent the program state at each step of a program execution: a variable state is passed as an input parameter of a state-transforming function, which returns the updated state as part of its return value. This style handles state changes without losing the referential transparency of the program expressions. Purely functional programming consists of ensuring that functions, inside the functional paradigm, will only depend on their arguments, regardless of any global or local state. A pure functional subroutine only has visibility of changes of state represented by state variables included in its scope.},
+  copyright = {Creative Commons Attribution-ShareAlike License},
+  langid = {english},
+  keywords = {🔥,Functional programming,Wikipedia},
+  annotation = {Page Version ID: 1082887441},
+  file = {/home/markus/Documents/Zotero/storage/XCK8DQD6/Purely_functional_programming.html}
+}
+
+@preamble{ "\newcommand{\noopsort}[1]{} " }
 

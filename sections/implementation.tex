@@ -1,17 +1,25 @@
 \chapter{Implementation} % 
 \label{chpt:implementation}
 
+\section{Railway Networks}
+
+The railway representation is implemented in a simple but not necessarily
+minimal way. 
+
+The signals are very simple: They are sat on a given linear segment and can
+either allow or disallow passage \texttt{out} of the linear segment. 
 
 \section{Programming Paradigm} % 
 \label{sec:programming-paradigm}
 
 F\# is a functional-first programming language. This is great as functional
 programming can be very succinct. But functional programming is not always the
-fastest approach. For this project, the local algorithm from \cite{liu1998a} is
+fastest approach. For this project, the local algorithm from
+\cite{liuSimpleLineartimeAlgorithms1998} is
 implemented as a \texttt{Solver}-object with an iterative implementation of the
 algorithm. 
 
-\cite{liu1998a} uses arrays in the implementation of the local algorithm. Arrays
+\cite{liuSimpleLineartimeAlgorithms1998} uses arrays in the implementation of the local algorithm. Arrays
 are not very functional as they are mutable. To make the code functional, the
 arrays could easily be replaced by a combination of linked lists and maps. This
 will result in 1) the code being functional but also 2) the code being much
@@ -49,7 +57,7 @@ satisfies the following predicate:
 \section{Domain-Specific Language (DSL)} % \label{sec:domain-specific-language}
 
 For easier creation of railway systems a DSL has been implemented. This DSL is
-inspired by the DSL described in \cite{kasting2016b}. Contrary to the approach
+inspired by the DSL described in \cite{kastingSystemSynthesisUsing2016}. Contrary to the approach
 cited, the F\# library FsLexYacc is used to write the lexer and parser for this
 DSL. 
 
